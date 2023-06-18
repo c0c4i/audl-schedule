@@ -1,6 +1,6 @@
 <template>
-    <div :key="game.id" class="flex items-center justify-center h-full shadow-lg my-2">
-        <div class="max-w-xl w-full bg-white rounded-xl p-4 flex flex-col justify-between leading-normal">
+    <div :key="game.id" class="flex items-center justify-center shadow-lg my-2 rounded-xl">
+        <div class="max-w-xl w-full bg-white p-4 flex flex-col justify-between leading-normal rounded-xl">
             <p class="text-sm text-gray-600 flex items-center">
                 {{ localeDate }}
             </p>
@@ -12,7 +12,6 @@
             </div>
 
             <p class="text-gray-700 text-base mb-2">
-                <!-- Open blank -->
                 <a :href="game.url" target="_blank" class="text-blue-500">{{ game.url }}</a>
             </p>
         </div>
