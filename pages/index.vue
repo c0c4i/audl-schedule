@@ -40,13 +40,15 @@ export default {
   computed: {
     passedMatches() {
       return this.games.filter(game => {
-        return new Date(game.date) < new Date();
+        return new Date(game.date) < new Date() && (game.status === 'Final' || game.status === 'Postponed');
       });
     },
     upcomingMatches() {
+      // All games that are not in passedMatches
       return this.games.filter(game => {
-        return new Date(game.date) > new Date();
+        return !this.passedMatches.includes(game);
       });
+
     }
   }
 };
